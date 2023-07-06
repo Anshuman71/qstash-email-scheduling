@@ -1,34 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Scheduling emails in user’s timezone using QStash
 
-## Getting Started
+## Introduction (1-3 paragraphs)
 
-First, run the development server:
+- Introduce readers to the use case using docsly’s example
+- Suggest possible solutions
+  - Run the cron job every hour or minute and then check based on the user’s timezone
+  - Schedule cron jobs in the user’s timezone
+- Introduce readers to UpStash
+  - Redis
+  - QStash
+- What will the reader learn from this article?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Building a Next.js application to schedule emails in user’s timezone
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Prerequisites - what does the reader need to have set up in advance?
+  - Editor of choice
+  - Node and NPM
+  - Any necessary accounts
+    - UpStash
+- Walk the reader through the process of creating a new Next.js application
+  - A simple frontend to take user confirmation for email notifications
+- Walk the reader through the process of building the backend function to schedule email cron job
+- Walk the reader through cancelling the scheduled cron job
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Conclusion (2-3 paragraphs)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Restate what the reader has learned
