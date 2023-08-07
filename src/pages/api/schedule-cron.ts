@@ -30,6 +30,8 @@ export default async function scheduleSummary(
   const emailScheduleKey = `email-schedule-${userId}`;
 
   const scheduleId = await upstash.get(emailScheduleKey);
+
+  // remove existing schedule before creating a new one
   if (scheduleId) {
     try {
       await axios.delete(
@@ -49,8 +51,7 @@ export default async function scheduleSummary(
   const [hour, min] = convertToUTC(selectedTime, utcOffset).split(":");
   const selectedCron = `${min} ${hour} * * *`;
 
-  console.log({ selectedCron });
-
+  // create and store new schedule
   try {
     const { data, status } = await axios.post(
       `${QSTASH_CONFIG.QSTASH_URL}${SUMMARY_ENDPOINT}`,
